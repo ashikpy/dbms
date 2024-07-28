@@ -38,7 +38,7 @@ function Hero({ questionId }) {
 
   return (
     <div className="container mt-5 flex flex-col gap-9 p-2 xl:flex-row xl:justify-between">
-      <div className="flex max-w-[45vw] flex-col gap-9">
+      <div className="flex flex-col gap-9 xl:max-w-[45vw]">
         <span className="flex flex-col gap-2">
           <h1 id={questionId} className="text-2xl font-black xl:text-3xl">
             Question - {questionId}
