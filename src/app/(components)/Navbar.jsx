@@ -33,7 +33,6 @@ function MobView({ className }) {
 
 function Navbar() {
   const size = 20;
-
   const [showMobView, setShowMobView] = useState(false);
   useEffect(() => {
     if (showMobView) {
