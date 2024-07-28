@@ -1,6 +1,6 @@
 function HomeCards({ title, questionNumber }) {
   return (
-    <div className="m-2 rounded-lg border-[1px] border-[#ffffff24] bg-[#25252572] p-3 transition duration-100 hover:border-[#ffffff40]">
+    <div className="m-2 rounded-lg border-[1px] border-[#ffffff24] bg-[#25252572] p-3 transition duration-100 hover:border-[#ffffff40] sm:m-0 sm:h-[12rem]">
       <h1 className="flex items-center gap-2 text-xl font-bold">
         ✨ Question {questionNumber}
       </h1>

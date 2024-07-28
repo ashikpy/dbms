@@ -37,21 +37,44 @@ function Hero({ questionId }) {
   };
 
   return (
-    <div className="container mt-5 flex flex-col gap-9 p-2">
-      <span className="flex flex-col gap-2">
-        <h1 id={questionId} className="text-2xl font-black">
-          Question - {questionId}
-        </h1>
-        <p>{CodeData[questionId].question}</p>
-      </span>
-
-      <span className="flex flex-col gap-2">
-        <h3 className="text-xl font-bold">Algorithm</h3>
-        <ReactMarkdown>{CodeData[questionId].description}</ReactMarkdown>
-      </span>
+    <div className="container mt-5 flex flex-col gap-9 p-2 xl:flex-row xl:justify-between">
+      <div className="flex max-w-[45vw] flex-col gap-9">
+        <span className="flex flex-col gap-2">
+          <h1 id={questionId} className="text-2xl font-black xl:text-3xl">
+            Question - {questionId}
+          </h1>
+          <p>{CodeData[questionId].question}</p>
+        </span>
+        <span className="flex flex-col gap-2">
+          <h3 className="text-xl font-bold xl:text-2xl">Algorithm</h3>
+          <ReactMarkdown>{CodeData[questionId].description}</ReactMarkdown>
+        </span>
+        <span className="hidden gap-5 xl:flex">
+          <Link
+            href={`/question/${Number(questionId) - 1} `}
+            className={`flex w-max items-center gap-2 rounded-md bg-[#ededed] p-2 px-4 font-bold text-black ${ifFirstPages ? "cursor-not-allowed text-slate-400 line-through" : ""}`}
+          >
+            <FcPrevious />
+            Question {Number(questionId) - 1}
+          </Link>
+          <Link
+            href={`/`}
+            className={`flex w-max items-center gap-2 rounded-md bg-[#ededed] p-2 px-4 font-bold text-black`}
+          >
+            Home
+            <BiLinkExternal />
+          </Link>
+          <Link
+            href={`/question/${Number(questionId) + 1}`}
+            className={`flex w-max items-center gap-2 rounded-md bg-[#ededed] p-2 px-4 font-bold text-black ${ifLastPages ? "cursor-not-allowed text-slate-400 line-through" : ""}`}
+          >
+            Question {Number(questionId) + 1} <FcNext />
+          </Link>
+        </span>
+      </div>
 
       <span className="flex flex-col gap-5">
-        <h3 className="text-xl font-bold">Code</h3>
+        <h3 className="text-xl font-bold xl:text-2xl">Code</h3>
         <div className="flex items-center justify-between text-sm text-white">
           <Link
             href={questionId}
@@ -88,7 +111,7 @@ function Hero({ questionId }) {
         >
           {CodeData[questionId].code}
         </SyntaxHighlighter>
-        <span className="flex justify-around">
+        <span className="flex justify-around xl:hidden">
           <Link
             href={`/question/${Number(questionId) - 1} `}
             className={`flex w-max items-center gap-2 rounded-md bg-[#ededed] p-2 px-4 font-bold text-black ${ifFirstPages ? "cursor-not-allowed text-slate-400 line-through" : ""}`}

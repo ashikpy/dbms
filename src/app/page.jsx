@@ -4,7 +4,7 @@ import Hero from "./(components)/Hero";
 
 function page() {
   return (
-    <main>
+    <main className="container mx-auto my-0">
       <Navbar />
       <Hero />
     </main>
