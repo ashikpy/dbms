@@ -9,7 +9,7 @@ function MobView({ className }) {
 
   return (
     <div
-      className={`sidebar grid grid-cols-3 gap-2 p-5 ${className ? className : ""}`}
+      className={`sidebar grid grid-cols-3 gap-2 overflow-auto p-5 ${className ? className : ""}`}
     >
       {questions.map((q, index) => (
         <a
@@ -25,7 +25,7 @@ function MobView({ className }) {
         href="https://bento.me/ashikpy"
         className="grid items-center rounded-md border-[1.5px] border-dashed border-[#ffffff24] p-2 text-center text-xl font-bold transition duration-200 hover:scale-105 hover:bg-[#ffffff24] hover:text-white"
       >
-        <span className="text-blue-200 underline">Ash!kpy</span>
+        <span className="text-blue-200 underline"> Ash!kpy</span>
       </a>
     </div>
   );
