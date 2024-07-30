@@ -48,12 +48,12 @@ function Navbar() {
   return (
     <>
       {<MobView className={showMobView ? "active" : ""} />}
-      <div
+      {/* <div
         className={`overlay ${showMobView ? "active" : ""} `}
         onClick={() => {
           setShowMobView(false);
         }}
-      ></div>
+      ></div> */}
       <nav className="text-bold flex justify-center p-4 lg:p-8">
         <div className="container flex items-center justify-between px-2 text-white">
           <BsLayoutThreeColumns
