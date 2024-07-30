@@ -54,7 +54,7 @@ function Navbar() {
           setShowMobView(false);
         }}
       ></div>
-      <nav className="text-bold p-4 lg:p-8">
+      <nav className="text-bold flex justify-center p-4 lg:p-8">
         <div className="container flex items-center justify-between px-2 text-white">
           <BsLayoutThreeColumns
             size={size}
