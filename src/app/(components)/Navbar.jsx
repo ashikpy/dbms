@@ -20,13 +20,13 @@ function MobView({ className }) {
           {q}
         </a>
       ))}
-
-      <a
-        href="https://bento.me/ashikpy"
-        className="grid items-center rounded-md border-[1.5px] border-dashed border-[#ffffff24] p-2 text-center text-xl font-bold transition duration-200 hover:scale-105 hover:bg-[#ffffff24] hover:text-white"
-      >
-        <span className="text-blue-200 underline"> Ash!kpy</span>
-      </a>
+      <div className=""></div>
+      <div className=""></div>
+      <div className=""></div>
+      <div className=""></div>
+      <div className=""></div>
+      <div className=""></div>
+      <div className=""></div>
     </div>
   );
 }
