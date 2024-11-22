@@ -3,9 +3,10 @@
 import { BsLayoutThreeColumns } from "react-icons/bs";
 import { AiFillHome } from "react-icons/ai";
 import React, { useState, useEffect } from "react";
+import { CodeData } from "../data";
 
 function MobView({ className }) {
-  const questions = Array.from({ length: 23 }, (_, i) => i + 1);
+  const questions = Array.from({ length: 11 }, (_, i) => i + 1);
 
   return (
     <div

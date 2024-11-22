@@ -11,6 +11,13 @@ import { BiLinkExternal } from "react-icons/bi";
 import ReactMarkdown from "react-markdown";
 
 function Hero({ questionId }) {
+
+  const formattedTitle = CodeData[questionId].question
+    .split(";")
+    .map((line, index) => line.trim())
+    .filter((line) => line)
+    .map((line, index) => <p key={index}>{line}</p>);
+
   const [copy, setCopy] = useState(false);
   const [ifFirstPages, setIfFirstPages] = useState(false);
   const [ifLastPages, setIfLastPages] = useState(false);
@@ -43,10 +50,10 @@ function Hero({ questionId }) {
           <h1 id={questionId} className="text-2xl font-black xl:text-3xl">
             Question - {questionId}
           </h1>
-          <p>{CodeData[questionId].question}</p>
+          <p>{formattedTitle}</p>
         </span>
         <span className="flex flex-col gap-2">
-          <h3 className="text-xl font-bold xl:text-2xl">Algorithm</h3>
+          {/* <h3 className="text-xl font-bold xl:text-2xl">Algorithm</h3> */}
           <ReactMarkdown>{CodeData[questionId].description}</ReactMarkdown>
         </span>
         <span className="hidden gap-5 xl:flex">
