@@ -65,7 +65,7 @@ function Navbar() {
             className="cursor-pointer"
           />
           <h1 className="text-lg font-bold sm:text-xl lg:text-2xl">
-            Data Structure Study Material
+            AI&DS Study Material
           </h1>
           <a href="/">
             <AiFillHome size={size} />
