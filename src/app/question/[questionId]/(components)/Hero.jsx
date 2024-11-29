@@ -108,7 +108,7 @@ function Hero({ questionId }) {
           )}
         </div>
         <SyntaxHighlighter
-          language="python"
+          language="sql"
           style={atomOneDark}
           customStyle={{
             padding: "25px",
